@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính GPA của học sinh</title>
+</head>
+<body>
+
+<script>
+        let inputBiol, inputPhy, inputChemis;
+        inputBiol = prompt('Enter the Math: ');
+        inputPhy = prompt('Enter the Physical: ');
+        inputChemis = prompt('Enter the Chemistry: ');
+
+        let biol = parseInt(inputBiol);
+        let phy = parseInt(inputPhy);
+        let chemis = parseInt(inputChemis);
+        let GPA = (biol + phy + chemis) / 3;
+        document.write('GPA of student = ' + GPA.toFixed(2));
+</script>
+</body>
+</html>

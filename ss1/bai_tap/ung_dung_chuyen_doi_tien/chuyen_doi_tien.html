@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Úng dụng chuyển đổi tiền tệ</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        p {
+            display: inline-block;
+            text-align: left;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Chuyển đổi một số loại tiền tệ</h2>
+    <p>Amount</p>
+    <input type="text" name="amount" id="amount" placeholder="Amount">
+    <p>From Currency</p>
+    <select id="from">
+        <option value="usd">USD</option>
+        <option value="vnd">VND</option>
+        <option value="yen">Japan</option>
+    </select>
+    <p>To Currency</p>
+    <select id="to">
+        <option value="usd">USD</option>
+        <option value="vnd">VND</option>
+        <option value="yen">Japan</option>
+    </select>
+    <button type="button" name="convert" onclick="myConvert()" >Convert</button><br>
+    <p id="result">Result: </p>
+<script src="transfer.js"></script>
+</body>
+</html>

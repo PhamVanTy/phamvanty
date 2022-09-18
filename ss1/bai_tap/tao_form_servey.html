@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form servey đơn giản</title>
+</head>
+<body>
+<div>
+    <form>
+        <header id="header" class="info">
+            <h2>Maker Research Servey</h2>
+            <div>Please take a few moments to complete this satisfaction survey.</div>
+        </header>
+        <ul>
+            <li>
+                <label>What is your age range?</label>
+                <div>
+                    <select>
+                        <option value="18-24"> 18 - 24</option>
+                        <option value="25-35"> 25 - 35</option>
+                        <option value="35-50"> 35 - 50</option>
+                        <option value="50+"> 50+</option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <label>What is your yearly income range?</label>
+                <div>
+                    <select>
+                        <option value="$0 - $25,000"> $0 - $25,000</option>
+                        <option value="$25,001 - $50,000"> $25,001 - $50,000</option>
+                        <option value="$50,001 - $100,000"> $50,001 - $100,000</option>
+                        <option value="$100,000+"> $100,000</option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <legend> Gender Identity</legend>
+                <div>
+                    <input id="male" type="radio" name="gender" value="Male">
+                    <label for="male">Male</label>
+                </div>
+                <div>
+                    <input id="female" type="radio" name="gender" value="Female">
+                    <label for="female">FeMale</label>
+                </div>
+                <div>
+                    <input id="nonbinary" type="radio" name="gender" value="Nonbinary">
+                    <label for="nonbinary">Nonbinary</label>
+                </div>
+                <div>
+                    <input id="other" type="radio" name="gender" value="Other">
+                    <label for="other">Other</label><br>
+                    <input type="text" value maxlength="250"><br>
+                    <label style="display: block">"Maximum of "
+                        <var>250</var>
+                        "characters.
+                        <em style="display: inline">"Currently Used: "
+                            <var>0</var>
+                            " characters."
+                        </em>
+                    </label>
+                </div>
+            </li>
+            <li>
+                <legend>
+                    Which of the following products have your purchased in the last 2 months. Please check all that apply.
+                </legend>
+                <div>
+                    <input type="checkbox" id="product1" name="product1" value="Product_1">
+                    <label for="product1">Product 1</label><br>
+                    <input type="checkbox" id="product2" name="product2" value="Product2">
+                    <label for="product2">Product 2</label><br>
+                    <input type="checkbox" id="product3" name="product3" value="Product3">
+                    <label for="product3">Product 3</label>
+                </div>
+            </li>
+            <li>
+                <legend>
+                    How often would you use our new product?
+                </legend>
+                <div>
+                    <input type="radio" id="daily" name="date" value="Daily">
+                    <label for="daily">Daily</label><br>
+                    <input type="radio" name="date" id="weekly" value="Weekly">
+                    <label for="weekly">Weekly</label><br>
+                    <input type="radio" id="monthly" name="date" value="Monthly">
+                    <label for="monthly">Monthly</label>
+                </div>
+            </li>
+            <li>
+                <label>
+                    What would you pay for the new product?
+                </label><br>
+                <span>$</span>
+                <span>
+                    <input type="text" name="dolar" id="dolar" placeholder="Dolar" maxlength="10">
+                </span>
+                <span>.</span>
+                <span>
+                    <input type="text" id="cent" placeholder="Cents" maxlength="2" value size="2">
+                </span>
+            </li>
+            <li>
+                <label>What features would you like to see in the new product.</label>
+                <div>
+                    <textarea></textarea>
+                </div>
+            </li>
+            <li>
+                <table cellspacing="0" border="1" style="border-collapse: collapse">
+                    <legend> Please rate your of agreement with the folowing statement.</legend>
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <td>Strong Disagree</td>
+                            <td>Disagree</td>
+                            <td>Agree</td>
+                            <td>Strong Agree</td>
+                        </tr>
+                    </thead>
+                </table>
+            </li>
+        </ul>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+    <h1 style="background-color: rgba(255,0,0,0.5);">rgb(255, 99, 71)</h1>
+</div>
+</body>
+</html>
