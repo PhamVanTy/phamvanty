@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+    <style>
+        form {
+            width: 250px;
+            border-radius: 2px;
+            border: 5px solid black;
+            border-radius: 15px;
+            padding: 10px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        button {
+            width: 25px;
+            background-color: white;
+            color: black;
+            border: 1px solid rgba(102, 90, 90, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 5px;
+            font-size: 15px;
+        }
+        button:hover {
+            background-color: aqua;
+        }
+        #calc, #ans{
+            text-align: right;
+            width: 80%;
+            padding: 10px;
+            border: 1px solid rgba(102, 90, 90, 0.2);
+        }
+    </style>
+</head>
+<body>
+<div class="calculate">
+    <h2>Calculate</h2>
+    <form name="form1">
+        <input id="calc" type="text" name="number" placeholder="Expression">
+        <input id="ans" type="text" name="result" placeholder="Result"><br><br>
+        <button type="button" value="1" onclick="form1.number.value += '1'">1</button>
+        <button type="button" value="2" onclick="form1.number.value += '2'">2</button>
+        <button type="button" value="3" onclick="form1.number.value += '3'">3</button>
+        <button type="button" value="+" onclick="form1.number.value += '+'">+</button>
+        <br>
+        <button type="button" value="4" onclick="form1.number.value += '4'">4</button>
+        <button type="button" value="5" onclick="form1.number.value += '5'">5</button>
+        <button type="button" value="6" onclick="form1.number.value += '6'">6</button>
+        <button type="button" value="-" onclick="form1.number.value += '-'">-</button>
+        <br>
+        <button type="button" value="7" onclick="form1.number.value += '7'">7</button>
+        <button type="button" value="8" onclick="form1.number.value += '8'">8</button>
+        <button type="button" value="9" onclick="form1.number.value += '9'">9</button>
+        <button type="button" value="*" onclick="form1.number.value += '*'">*</button>
+        <br>
+        <button type="button" value="Clear" onclick="form1.number.value = ''; form1.result.value = ''">C</button>
+        <button type="button" value="0" onclick="form1.number.value += '0'">0</button>
+        <button type="button" value="=" onclick="form1.result.value = eval(form1.number.value)">=</button>
+        <button type="button" value="/" onclick="form1.number.value += '/'">/</button>
+    </form>
+</div>
+</body>
+</html>
