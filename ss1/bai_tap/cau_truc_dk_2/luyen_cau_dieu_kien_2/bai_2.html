@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi m sang feet</title>
+</head>
+<body>
+<p>Chuyển đổi từ mét sang feet</p>
+<input type="text" id="met" placeholder="Nhập vào mét">
+<input type="button" onclick="chuyen()" value="Chuyển đổi">
+<br><br>
+<input type="text" name="feet" id="feet" placeholder="Giá trị sau chuyển">
+<script>
+    function chuyen() {
+        const GIATRI = 3.2808;
+        let met = document.getElementById('met').value;
+        let feet;
+        if (met < 0) {
+            document.getElementById('feet').value = 'Error';
+        }else {
+            feet = met * GIATRI;
+            document.getElementById('feet').value = feet;
+        }
+    }
+</script>
+</body>
+</html>

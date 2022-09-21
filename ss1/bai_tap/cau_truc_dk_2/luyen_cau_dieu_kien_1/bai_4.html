@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm max 3 số nhập vào</title>
+</head>
+<body>
+<input type="text" id="num_a" placeholder="Enter number A">
+<input type="text" id="num_b" placeholder="Enter number B">
+<input type="text" id="num_c" placeholder="Enter number C">
+<input type="button" value="Check" onclick="findMax()">
+<script>
+    function findMax() {
+        let num_a = parseInt(document.getElementById('num_a').value);
+        let num_b = parseInt(document.getElementById('num_b').value);
+        let num_c = parseInt(document.getElementById('num_c').value);
+        if (num_a > num_b && num_a > num_c) {
+            alert('Number a value ' + num_a + ' is max.');
+        }else if (num_b > num_c) {
+            alert('Number b value ' + num_b + ' is max.');
+        }else {
+            alert('Number c value ' + num_c + ' is max');
+        }
+    }
+</script>
+</body>
+</html>

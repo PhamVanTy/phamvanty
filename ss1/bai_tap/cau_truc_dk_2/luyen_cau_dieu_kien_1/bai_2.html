@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tuổi Học Sinh</title>
+</head>
+<body>
+<input type="text" id="year" placeholder="Nhập năm sinh">
+<input type="button" value="Result" onclick="myFunction()">
+<script>
+    const OLD = 15;
+function myFunction() {
+    let old = parseInt(document.getElementById('year').value);
+    if (2022 - old >= OLD) {
+        alert('Đủ tuổi vào lớp 10!');
+    }else {
+        alert('Không đủ tuổi lên lớp 10!');
+    }
+}
+</script>
+</body>
+</html>

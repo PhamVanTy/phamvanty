@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực của học sinh</title>
+    <style>
+        body {
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h2>Nhập vào điểm thi của học sinh</h2>
+<input type="text" id="ktra" placeholder="Điểm ktra">
+<input type="text" id="giuaKy" placeholder="Điểm giữa kỳ">
+<input type="text" id="cuoiKy" placeholder="Điểm cuối kỳ">
+<input type="button" value="GPA" onclick="xepLoai()">
+<p id="result"></p>
+<script>
+    function xepLoai() {
+        let ktra = parseInt(document.getElementById('ktra').value);
+        let giuaKy = parseInt(document.getElementById('giuaKy').value);
+        let cuoiKy = parseInt(document.getElementById('cuoiKy').value);
+        let GPA = ktra * 0.2 + giuaKy * 0.3 + cuoiKy * 0.5;
+        if (GPA >= 8.5) {
+            document.getElementById('result').innerHTML = 'Học sinh giỏi với điểm số TB: ' + GPA;
+        }else if (GPA >= 6.5) {
+            document.getElementById('result').innerHTML = 'Học sinh khá với điểm số TB: ' + GPA;
+        }else if (GPA >= 4.5) {
+            document.getElementById('result').innerHTML = 'Học sinh trung bình với điểm số TB: ' + GPA;
+        }else {
+            document.getElementById('result').innerHTML = 'Học sinh yếu với điểm số TB: ' + GPA;
+        }
+    }
+</script>
+</body>
+</html>

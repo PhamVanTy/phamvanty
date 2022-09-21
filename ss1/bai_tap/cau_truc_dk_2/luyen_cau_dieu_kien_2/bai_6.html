@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 1</title>
+</head>
+<body>
+<input type="text" id="num_a">
+<input type="text" id="num_b">
+<input type="button" onclick="nghiemPT()" value="Giai PT">
+<p id="nghiem"></p>
+<script>
+    function nghiemPT() {
+        let a = parseFloat(document.getElementById('num_a').value);
+        let b = parseFloat(document.getElementById('num_b').value);
+        let x;
+        if (a == 0) {
+            if (b == 0){
+                document.getElementById('nghiem').innerText = 'Pt có vô số nghiệm';
+            }else {
+                document.getElementById('nghiem').innerText = 'Pt vô nghiệm';
+            }
+        }else {
+            if (b == 0){
+                document.getElementById('nghiem').innerText = 'PT có 1 nghiệm x = 0';
+            }else {
+                x = (-b)/a;
+                document.getElementById('nghiem').innerHTML = 'PT có nghiệm x = ' + x;
+            }
+        }
+    }
+</script>
+</body>
+</html>

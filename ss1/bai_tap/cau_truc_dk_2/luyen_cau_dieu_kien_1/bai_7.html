@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước tiền điện thoại</title>
+</head>
+<body>
+<p>Nhập vào số phút gọi</p>
+<input type="text" id="timeLocal" placeholder="Số phút gọi nội địa">
+<input type="text" id="timeGlobal" placeholder="Số phút gọi quốc tế">
+<input type="button" value="Thành tiền" onclick="thanhTien()"><br>
+<p id="out_1"></p>
+<script>
+    function thanhTien() {
+        const GIACUOC_LOCAL = 200;
+        const GIACUOC_GLOBAL = 400;
+        let input_1 = document.getElementById('timeLocal').value;
+        let input_2 = document.getElementById('timeGlobal').value;
+        if (input_1 <= 0 || input_2 <= 0) {
+            document.getElementById('out_1').innerHTML = 'Giá trị nhập vào phải lớn hơn 0!';
+        } else {
+            let out_1 = input_1 * GIACUOC_LOCAL;
+            let out_2 = input_2 * GIACUOC_GLOBAL;
+            let total = out_1 + out_2;
+            document.getElementById('out_1').innerHTML = 'Số tiền cước điện thoại trong tháng: ' + total+ 'VND'
+        }
+    }
+</script>
+</body>
+</html>

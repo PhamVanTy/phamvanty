@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In ra số A nhỏ hay lớn hơn 0</title>
+</head>
+<body>
+<input type="text" id="num" placeholder="Nhập vào số cần check">
+<input type="button" value="Result" onclick="myFunction()">
+<script>
+    function myFunction() {
+        let a = parseInt(document.getElementById('num').value);
+        if (a > 0) {
+            alert(a + ' > 0');
+        } else {
+            alert(a + ' <= 0');
+        }
+    }
+</script>
+</body>
+</html>

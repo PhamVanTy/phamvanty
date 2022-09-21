@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng nhận được</title>
+</head>
+<body>
+<h4>Nhập vào doanh số của bạn (ctr chỉ mang tính thử nghiệm nên nhập trong khoảng 1-30000)</h4>
+<input type="text" id="dThu" placeholder="Nhập vào doanh số">
+<input type="button" value="Calculate" onclick="Calculate()">
+<p id="result"></p>
+<script>
+    function Calculate() {
+        let doanhSo = parseInt(document.getElementById('dThu').value);
+        let hoaHong;
+        if (doanhSo >= 2000) {
+            hoaHong = doanhSo * 0.15;
+            document.getElementById('result').innerHTML = 'Hoa hồng nhận được ' + hoaHong;
+        }else if (doanhSo >= 1000) {
+            hoaHong = doanhSo * 0.1;
+            document.getElementById('result').innerHTML = 'Hoa hồng nhận được ' + hoaHong;
+        }else if (doanhSo >= 500) {
+            hoaHong = doanhSo * 0.08;
+            document.getElementById('result').innerHTML = 'Hoa hồng nhận được ' + hoaHong;
+        }else if (doanhSo >= 300) {
+            hoaHong = doanhSo * 0.05;
+            document.getElementById('result').innerHTML = 'Hoa hồng nhận được ' + hoaHong;
+        }else {
+            hoaHong = doanhSo * 0.03;
+            document.getElementById('result').innerHTML = 'Hoa hồng nhận được ' + hoaHong;
+        }
+    }
+</script>
+</body>
+</html>

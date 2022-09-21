@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do You Love Me</title>
+    <style>
+        body {
+            background-image: url("../image/background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        h1{
+            color: red;
+            position: absolute;
+            left:220px;
+            top:175px;
+        }
+        button {
+            background-color: deeppink;
+            border-radius: 3px;
+            border: 1px solid red;
+        }
+        #yes {
+            position: absolute;
+            left:285px;
+            top:235px;
+        }
+        #no {
+            position: absolute;
+            left:360px;
+            top:235px;
+        }
+    </style>
+</head>
+<body>
+<h1>Do you love me?</h1>
+<button type="button" id="yes" value="Yes" onclick="yesClick()" >YES</button>
+<button type="button" id="no" value="No" onmouseover="noHover()">NO</button>
+<script>
+    function yesClick() {
+        alert("Yes. you are right ");
+    }
+    function noHover() {
+        let x = Math.round(Math.random() * window.innerWidth);
+        let y = Math.round(Math.random() * window.innerHeight);
+        document.getElementById('no').style.left = x + 'px';
+        document.getElementById('no').style.top = y + 'px';
+    }
+</script>
+</body>
+</html>

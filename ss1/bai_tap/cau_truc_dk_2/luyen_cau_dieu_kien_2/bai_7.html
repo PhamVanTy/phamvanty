@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+<input type="text" id="num_a">
+<input type="text" id="num_b">
+<input type="text" id="num_c">
+<input type="button" value="Giải PT" onclick="myFunction()">
+<p id="nghiem"></p>
+
+<script>
+    function myFunction() {
+        let a = parseFloat(document.getElementById('num_a').value);
+        let b = parseFloat(document.getElementById('num_b').value);
+        let c = parseFloat(document.getElementById('num_c').value);
+        let x, x1, x2, delta;
+        delta = b * b - 4 * a * c;
+        if (delta < 0)
+        {
+            document.getElementById('nghiem').innerText = 'PT vô nghiệm!';
+        }
+        else if (delta == 0)
+        {
+            x = -b / (2 * a);
+            document.getElementById('nghiem').innerText = 'Pt có nghiệm là: ' + x;
+        }
+        else
+        {
+            x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            x2 = (-b - Math.sqrt(delta)) / (2 * a);
+            document.getElementById('nghiem').innerText = 'PT có 2 nghiệm x1 = ' + x1 + ' và x2 = ' + x2;
+        }
+    }
+</script>
+</body>
+</html>

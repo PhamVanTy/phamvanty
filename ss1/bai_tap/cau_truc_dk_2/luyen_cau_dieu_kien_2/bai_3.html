@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình vuông</title>
+</head>
+<body>
+<input type="text" id="canh" placeholder="Nhập chiều dài cạnh.">
+<input type="button" onclick="tinhDT()" value="Tính Diện tích"><br>
+<input type="text" id="dientich" placeholder="Diện tích hình vuông.">
+
+<script>
+    function tinhDT() {
+        let chieu_dai = document.getElementById('canh').value;
+        let dien_tich;
+        if (chieu_dai <= 0) {
+            document.getElementById('dientich').value = 'Giá trị cạnh không đúng';
+        }else {
+            dien_tich = chieu_dai * chieu_dai;
+            document.getElementById('dientich').value = dien_tich;
+        }
+    }
+</script>
+</body>
+</html>

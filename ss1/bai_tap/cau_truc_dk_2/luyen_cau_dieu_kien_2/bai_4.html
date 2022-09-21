@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích hình chữ nhật</title>
+</head>
+<body>
+<input type="text" id="dai" placeholder="Nhập vào chiều dai"><br>
+<input type="text" id="rong" placeholder="Nhập vào chiều rộng">
+<input type="button" onclick="dienTich()" value="Diện tích"><br>
+<input type="text" id="dientich" placeholder="Diện tích HCN">
+
+<script>
+    function dienTich() {
+        let dai = document.getElementById('dai').value;
+        let rong = document.getElementById('rong').value;
+        let dientich;
+        if (dai <= 0 || rong <= 0){
+            document.getElementById('dientich').value = 'Nhập vào phải lớn hơn 0!';
+        }else {
+            dientich =  dai * rong;
+            document.getElementById('dientich').value = dientich;
+        }
+    }
+</script>
+</body>
+</html>

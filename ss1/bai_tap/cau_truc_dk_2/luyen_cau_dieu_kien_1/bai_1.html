@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra a có chia hết cho b không</title>
+</head>
+<body>
+<input type="text" id="num_a" placeholder="num_a">
+<input type="text" id="num_b" placeholder="num_b">
+<input type="button" value="Result" onclick="myFunction()">
+<p id="result"></p>
+<script>
+    function myFunction() {
+        let a = parseInt(document.getElementById('num_a').value);
+        let b = parseInt(document.getElementById('num_b').value);
+        if (a % b === 0) {
+            document.getElementById('result').innerHTML = a + " chia hết cho " + b;
+        } else {
+            document.getElementById('result').innerHTML = a + " không chia hết cho " + b;
+        }
+    }
+</script>
+</body>
+</html>
