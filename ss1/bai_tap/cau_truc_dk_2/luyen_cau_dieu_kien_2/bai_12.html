@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
+</head>
+<body>
+<input type="text" id="von" placeholder="Nhập vào số vốn">
+<input type="text" id="nam" placeholder="Nhập vào số năm gửi">
+<input type="text" id="laisuat" placeholder="Nhập vào lãi suất">
+<input type="button" onclick="myFunction()" value="Tiền lãi">
+<p id="congdon"></p>
+<script>
+    function myFunction() {
+        let von = parseFloat(document.getElementById('von').value);
+        let nam = parseFloat(document.getElementById('nam').value);
+        let laisuat = parseFloat(document.getElementById('laisuat').value);
+        let congDon;
+        if (von < 0 || nam < 0){
+            document.getElementById('congdon').innerText = 'Số tiền Vốn không có!';
+        }else {
+            congDon = von * Math.pow((1 + nam), laisuat);
+            document.getElementById('congdon').innerHTML = 'Số tiền sau khi cộng dồn lãi: ' + congDon;
+        }
+    }
+</script>
+</body>
+</html>
