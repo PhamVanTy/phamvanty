@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change temperature</title>
+</head>
+<body>
+<script>
+    let temp;
+    do {
+        temp = +prompt("Enter the temparature");
+        if (temp > 100){
+            alert("Please lower the temperature");
+        }else if (temp < 20){
+            alert("Please upper the temperature");
+        }else {
+            alert("The temperature is nomal");
+        }
+    }while (temp > 100 || temp < 20);
+</script>
+</body>
+</html>

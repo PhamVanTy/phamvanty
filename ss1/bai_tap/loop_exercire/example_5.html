@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sum fibonacci</title>
+</head>
+<body>
+<script>
+    let num_1 = 1, num_2 = 1, fibo;
+    for (let i = 0; i < 20; i++){
+        fibo = num_1 + num_2;
+        num_1 = num_2;
+        num_2 = fibo;
+    }
+    document.write(fibo);
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Print heart</title>
+</head>
+<body>
+<script>
+let i, j;
+let n = +prompt('Enter value of n');
+for (i = n/2; i <= n; i += 2){
+    for (j = 1; j < n - i; j += 2){
+        document.write('\xa0\xa0');
+    }
+    for (j = 1; j <= i; j++){
+        document.write('*');
+    }
+    for (j = 1; j <= n - i; j++){
+        document.write('\xa0\xa0');
+    }
+    for (j = 1; j <= i; j++){
+        document.write('*');
+    }
+    document.write('<br>');
+}
+for (i = n; i >= 1; i--){
+    for (j = i; j < n; j++){
+        document.write('\xa0\xa0');
+    }
+    for (j = 1; j <= (i*2)-1; j++){
+        document.write('*');
+    }
+    document.write('<br>');
+}
+</script>
+</body>
+</html>

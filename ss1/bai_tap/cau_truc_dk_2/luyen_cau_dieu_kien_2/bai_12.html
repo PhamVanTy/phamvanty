@@ -5,22 +5,22 @@
     <title>Tính lãi ngân hàng</title>
 </head>
 <body>
-<input type="text" id="von" placeholder="Nhập vào số vốn">
-<input type="text" id="nam" placeholder="Nhập vào số năm gửi">
-<input type="text" id="laisuat" placeholder="Nhập vào lãi suất">
-<input type="button" onclick="myFunction()" value="Tiền lãi">
-<p id="congdon"></p>
+<input type="text" id="equity" placeholder="Enter Equity">
+<input type="text" id="year" placeholder="Enter the year number">
+<input type="text" id="interestRate" placeholder="Enter interest rate">
+<input type="button" onclick="myFunction()" value="Interest">
+<p id="incremental"></p>
 <script>
     function myFunction() {
-        let von = parseFloat(document.getElementById('von').value);
-        let nam = parseFloat(document.getElementById('nam').value);
-        let laisuat = parseFloat(document.getElementById('laisuat').value);
-        let congDon;
-        if (von < 0 || nam < 0){
-            document.getElementById('congdon').innerText = 'Số tiền Vốn không có!';
+        let equity = parseFloat(document.getElementById('equity').value);
+        let year = parseFloat(document.getElementById('year').value);
+        let interestRate = parseFloat(document.getElementById('interestRate').value);
+        let incremental;
+        if (equity < 0 || year < 0){
+            document.getElementById('incremental').innerText = 'The empty Equity!';
         }else {
-            congDon = von * Math.pow((1 + nam), laisuat);
-            document.getElementById('congdon').innerHTML = 'Số tiền sau khi cộng dồn lãi: ' + congDon;
+            incremental = equity * Math.pow((1 + year), interestRate);
+            document.getElementById('incremental').innerHTML = 'The money after: ' + incremental;
         }
     }
 </script>

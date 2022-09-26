@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sum of n</title>
+</head>
+<body>
+<input type="text" id="numberN" placeholder="Enter the number greater then 0">
+<input type="button" onclick="myFunction()" value="Sum of N">
+<p id="result"></p>
+</body>
+</html>
+<script>
+    function myFunction() {
+        let numberN = parseFloat(document.getElementById('numberN').value);
+        let sum = 0;
+        for (let i = 0; i <= numberN; i++) {
+            sum += i;
+        }
+        document.getElementById('result').innerHTML = 'Sum of N: ' + sum;
+    }
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Print Fibonacci</title>
+</head>
+<body>
+<script>
+    // let re;
+    // function fibonacci(re){
+    //     if (re == 0 || re == 1){
+    //         return 1;
+    //     }else {
+    //         return (fibonacci(re-2) + fibonacci(re-1));
+    //     }
+    // }
+    let num_1 = 0, num_2 = 1, fibo;
+    for(let i = 0; i < 20; i++){
+        // document.write(fibonacci(i) + "<br>");
+        fibo = num_1 + num_2;
+        num_1 = num_2;
+        num_2 = fibo;
+        document.write(fibo + "<br>");
+    }
+
+</script>
+</body>
+</html>

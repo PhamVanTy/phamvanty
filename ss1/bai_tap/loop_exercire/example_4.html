@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fobonacci tt</title>
+</head>
+<body>
+<script>
+    let num_1 = 0, num_2 = 1, fibo;
+    for (let i = 0; i < 20; i++) {
+        fibo = num_1 + num_2;
+        num_1 = num_2;
+        num_2 = fibo;
+        if (fibo % 5 == 0) {
+            document.write(fibo + "<br>");
+            break;
+        }
+    }
+</script>
+</body>
+</html>

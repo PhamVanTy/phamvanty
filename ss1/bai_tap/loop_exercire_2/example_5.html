@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let equity, month, interestRate;
+    let incremental;
+    do {
+        equity = +prompt("Enter the Equity");
+        month = +prompt("Enter the month");
+        interestRate = +prompt("Enter the interesRate");
+    } while (equity <= 0 || month <= 0 || interestRate <= 0);
+    console.log(month);
+    incremental = equity * Math.pow((1 + month), interestRate);
+    document.write('The money after: ' + incremental);
+
+</script>
+</body>
+</html>
