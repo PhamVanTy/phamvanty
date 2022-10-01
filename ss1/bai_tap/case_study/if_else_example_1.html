@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="salary" value="Enter the Salary">
+<input type="button" value="Salary" onclick="myFunction()">
+<p id="result"></p>
+<script>
+    function myFunction() {
+        const CASE1 = 0.2;
+        const CASE2 = 0.1;
+        const CASE3 = 0.05;
+        let salary = document.getElementById('salary').value;
+        if (salary > 15000000){
+             salary -= salary * CASE1;
+            document.getElementById('result').innerHTML = salary + ' VND';
+        }else if (salary > 7000000){
+            salary -= salary * CASE2;
+            document.getElementById('result').innerHTML = salary + ' VND';
+        }else {
+            salary -= salary * CASE3;
+            document.getElementById('result').innerHTML = salary + ' VND';
+        }
+    }
+</script>
+</body>
+</html>

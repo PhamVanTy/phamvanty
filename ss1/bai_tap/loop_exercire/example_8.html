@@ -5,6 +5,26 @@
     <title>Number guessing game</title>
 </head>
 <body>
+<script>
+    alert('You have 3 guesses and number guess for the 0->100!');
+    let rnd = Math.round(Math.random() * 100);
+    let guessNum, cnt = 0;
+    do {
+        guessNum = +prompt("Enter at number guess");
+        if (guessNum == rnd) {
+            alert("The number guess is true");
+        } else if (guessNum > rnd) {
+            alert('The number guess is largger');
+        } else {
+            alert('The number guess is small');
+        }
+        cnt++;
+        if (cnt == 3) {
+            alert('Your guess false');
+            break;
+        }
+    } while (guessNum != rnd || cnt >= 3);
 
+</script>
 </body>
 </html>
