@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Descending sort(sắp xếp mảng giảm dần)</title>
+</head>
+<body>
+<script>
+    let n = +prompt('Enter the numbers of array');
+    let numArray = [];
+    for (let i = 0; i < n; i++){
+        numArray[i] = +prompt('Enter the element ' + i + ' of array');
+    }
+    let temp;
+    for (let i = 0; i < n; i++){
+        for (let j = i+1; j < n; j++){
+            if (numArray[i] < numArray[j]){
+                temp = numArray[i];
+                numArray[i] = numArray[j];
+                numArray[j] = temp;
+            }
+        }
+    }
+    // numArray.sort();
+    console.log(numArray);
+</script>
+</body>
+</html>

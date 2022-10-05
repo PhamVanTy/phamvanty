@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Concats 2 array</title>
+</head>
+<body>
+<script>
+    let n = +prompt('Enter the numbers element array A');
+    let arrayA = [];
+    let arrayB = [];
+    let arrayC = [];
+    for (let i = 0; i < n; i++){
+        arrayA[i] = +prompt('Enter the element ' + i + ' of array A');
+    }
+    for (let i = 0; i < n; i++){
+        arrayB[i] = +prompt('Enter the element ' + i + ' of array B');
+    }
+    for (let i = 0; i < 2*n; i++){
+        if (i < n){
+            arrayC[i] = arrayA[i];
+        }else {
+            arrayC[i] = arrayB[i-n];
+        }
+    }
+    console.log(arrayA);
+    console.log(arrayB);
+    document.write('The array C after concats 2 array: ' + arrayC);
+</script>
+</body>
+</html>

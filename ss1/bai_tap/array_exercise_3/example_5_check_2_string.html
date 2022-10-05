@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check 2 string same same</title>
+</head>
+<body>
+<script>
+    let strA = prompt("Enter the string A");
+    let strB = prompt("Enter the string B");
+    for (let i = 0; i < strA.length; i++){
+        for (let j = 0; j < strB.length; j++){
+            if (strA.length === strB.length){
+                if (strA[i] === strB[j]){
+                    console.log('2 string are same same');
+                }
+            }else {
+                console.log('2 string are different');
+            }
+        }
+    }
+    console.log(strA);
+    console.log(strB);
+</script>
+</body>
+</html>

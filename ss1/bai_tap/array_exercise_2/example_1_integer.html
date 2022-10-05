@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search integer (>) 10</title>
+</head>
+<body>
+<script>
+    let myArray = [], cnt = 0;
+    for (let i = 0; i < 10; i++){
+        myArray[i] = +prompt('Enter the array element ' + i);
+    }
+    for (let i = 0; i < 10; i++){
+        if (myArray[i] >= 10){
+            cnt++;
+        }
+    }
+    document.write('The number of array >= 10: ' + cnt);
+    console.log(myArray);
+</script>
+</body>
+</html>

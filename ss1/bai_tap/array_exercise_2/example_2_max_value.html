@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Max value of array</title>
+</head>
+<body>
+<script>
+    let myArray = [];
+    for (let i = 0; i < 10; i++){
+       myArray[i] = +prompt('Enter the value element ' + i + ' of array');
+    }
+    let temp, maxValue = myArray[0];
+    for (let i = 1; i < 10; i++){
+        if (myArray[i] > maxValue){
+            maxValue = myArray[i];
+            myArray[i] = myArray[i+1];
+            temp = i;
+        }
+    }
+    document.write('The value max of array: ' + maxValue + '<br>');
+    document.write('The position max value: ' + temp);
+    console.log(myArray);
+</script>
+</body>
+</html>

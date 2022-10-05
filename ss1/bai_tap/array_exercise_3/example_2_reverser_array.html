@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reverser Array</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Enter the numbers element array");
+    let myArray = [];
+    for (let i = 0; i < n; i++){
+        myArray[i] = prompt('Enter the element ' + i + ' of array');
+    }
+    for (let i = 0; i < n/2 ; i++) {
+        let temp = myArray[i];
+        myArray[i] = myArray[n-1-i];
+        myArray[n-1-i] = temp;
+    }
+    // myArray.reverse();
+    console.log(myArray);
+</script>
+</body>
+</html>

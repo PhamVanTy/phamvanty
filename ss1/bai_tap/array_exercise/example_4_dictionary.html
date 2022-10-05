@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Distionary</title>
+</head>
+<body>
+<form action="simpleform" method="get">
+    <input type="text" id="character" placeholder="Enter character translate.">
+    <input type="button" onclick="myTranslate()" value="Translate">
+    <br><br>
+    <p id="result"></p>
+</form>
+<script>
+    function myTranslate() {
+        let str = document.getElementById('character').value;
+        let engLish = ['one', 'tow', 'three', 'four', 'five', 'six', 'seven'];
+        let vietNamese = ['một', 'hai', 'ba', 'bốn', 'năm', 'sáu', 'bảy'];
+        let cnt = false;
+        for (let i = 0; i < engLish.length; i++) {
+            if (str === engLish[i]) {
+                document.getElementById('result').innerHTML =
+                    'Translate english to vietnamese: ' + vietNamese[i];
+                cnt = true;
+            }
+        }
+        if (cnt === false){
+            document.getElementById('result').innerHTML = 'Not found character';
+        }
+    }
+</script>
+</body>
+</html>

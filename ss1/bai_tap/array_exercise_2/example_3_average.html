@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Print average of array</title>
+</head>
+<body>
+<script>
+    let myArray = [], averValue, sum = 0;
+    let n = +prompt('Enter the number of aray');
+    for (let i = 0; i < n; i++){
+        myArray[i] = +prompt('Enter the element ' + i + ' of array');
+    }
+    for (let i = 0; i < n; i++){
+        sum += myArray[i];
+    }
+    averValue = sum / n;
+    let maxValue = myArray[0];
+    for (let i = 1; i < n; i++){
+        if (myArray[i] > maxValue){
+            maxValue = myArray[i];
+            myArray[i] = myArray[i+1];
+        }
+    }
+    document.write('The max value of array: ' + maxValue + '<br>');
+    document.write('The average of array: ' + averValue);
+</script>
+</body>
+</html>
