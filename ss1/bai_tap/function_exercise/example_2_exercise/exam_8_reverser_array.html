@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reverse Array</title>
+</head>
+<body>
+<script>
+    let num = +prompt("Enter the number");
+    let array = [];
+    for (let i = 0; i < num; i++) {
+        array[i] = +prompt("Enter the element "+i);
+    }
+    function reverseArray(arr) {
+        for (let i = 0; i < arr.length/2; i++) {
+            let temp = arr[arr.length-i-1];
+            arr[arr.length-i-1] = arr[i];
+            arr[i] = temp;
+        }
+    }
+    reverseArray(array);
+    document.write("Array after reverse: " + array);
+</script>
+</body>
+</html>

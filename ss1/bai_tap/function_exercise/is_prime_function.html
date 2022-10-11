@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Is Prime function</title>
+</head>
+<body>
+<script>
+    let numbers = +prompt("Enter the numbers");
+    let cnt = 0;
+    let N = 2;
+    function isPrime(number) {
+        if (number < 2){
+            return 0;
+        }
+        for (let i = 2; i <= Math.sqrt(number); i++){
+            if (number % i === 0){
+                return 0;
+            }
+        }
+        return 1;
+    }
+    while (cnt < numbers){
+        if (isPrime(N)){
+            document.write(N + "<br>");
+            cnt++;
+        }
+        N++;
+    }
+</script>
+</body>
+</html>

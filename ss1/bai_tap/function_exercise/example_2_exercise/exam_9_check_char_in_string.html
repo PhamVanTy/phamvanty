@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check character in the string</title>
+</head>
+<body>
+<script>
+    function checkCharToString(str, char) {
+        let cnt = 0;
+        for (let i = 0; i < str.length; i++) {
+            if (char == str[i]){
+                cnt++;
+            }
+        }
+        return cnt;
+    }
+    let string = prompt("Enter the string");
+    let char = prompt("Enter the character check");
+    alert("The character count: " + checkCharToString(string, char));
+</script>
+</body>
+</html>

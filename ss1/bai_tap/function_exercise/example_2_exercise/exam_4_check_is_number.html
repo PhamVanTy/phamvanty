@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check is numbers</title>
+</head>
+<body>
+<script>
+    function checkNum(num) {
+        if (num >= '0' || num <= '9'){
+            return true;
+        }else
+            return false;
+    }
+    let value = prompt("Enter the value check");
+    if (checkNum(value)){
+        alert("The input value is number");
+    }else{
+        alert("The input value is not number");
+    }
+</script>
+</body>
+</html>

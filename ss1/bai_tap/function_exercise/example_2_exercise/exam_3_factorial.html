@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate Factorial(Tính giai thừa)</title>
+</head>
+<body>
+<script>
+    function calFactorial(num) {
+        if (num < 0){
+            return -1;
+        }else {
+            if (num == 1 || num == 0){
+                return 1;
+            }
+        }
+        let fac = 1;
+        for (let i = 2; i <= num; i++){
+            fac *= i;
+        }
+        return fac;
+    }
+    let number = +prompt("Enter the number");
+    alert(calFactorial(number));
+</script>
+</body>
+</html>

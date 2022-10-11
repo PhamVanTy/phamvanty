@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find start print Constellation</title>
+</head>
+<body>
+<script>
+    let inputStart = prompt("Enter the start");
+    let start = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let constel = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    function alertConstelFromStart(str) {
+        let index;
+        for (let i = 0; i < str.length; i++) {
+            if (inputStart == str[i]){
+                index = i;
+            }
+        }
+        return index;
+    }
+    for (let i = 0; i < constel.length; i++){
+        if (i == alertConstelFromStart(start)){
+            alert("The Constellation : " + constel[i]);
+        }
+    }
+</script>
+</body>
+</html>
