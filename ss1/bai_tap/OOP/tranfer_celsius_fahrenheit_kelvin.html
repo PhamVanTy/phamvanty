@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transfer celsius fahrenheit kelvin</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        constructor(celsius) {
+            this.celsius = celsius;
+        }
+        getFahrenheit(){
+            return this.celsius * 1.8 + 32;
+        }
+        getKelvin(){
+            return this.celsius + 273;
+        }
+    };
+    let celsius = new Temperature(25);
+    document.write("Result Celsius transfer Fahrenheit: " + celsius.getFahrenheit() + "<br>");
+    document.write("Result Celsius transfer Kelvin: " + celsius.getKelvin());
+</script>
+</body>
+</html>

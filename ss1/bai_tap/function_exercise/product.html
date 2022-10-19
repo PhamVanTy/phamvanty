@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Enter the product" id="product">
+<!--<input type="text" placeholder="Enter the product information" id="infoProduct">-->
+<input type="button" value="Add" onclick="addProduct()">
+<p id="display"></p>
+<script>
+    let listProduct = ['Nokia', 'Iphone'];
+    displayProduct(listProduct);
+    function displayProduct(list) {
+        let displayTable = '<table border="1px">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Product Name</th>\n' +
+            '        <th>Edit</th>\n' +
+            '        <th>Remove</th>\n' +
+            '    </tr>\n';
+        for (let i = 0; i < list.length; i++) {
+            displayTable += '<tr>\n' +
+                '    <td>'+(i+1)+'</td>\n' +
+                '    <td>'+ list[i]+'</td>\n' +
+                '    <td>'+'<input type="button" value="Edit" onclick="editProduct('+i+')">'+'</td>\n' +
+                '    <td>'+'<input type="button" value="Delete" onclick="removeProduct('+i+')">'+'</td>\n' +
+                '</tr>';
+        }
+        displayTable += '</table>';
+        document.getElementById('display').innerHTML = displayTable;
+    }
+    function removeProduct(index) {
+        let confirmDelete = confirm("Please confirm product delete");
+        if (confirmDelete){
+            listProduct.splice(index, 1);
+        }
+        displayProduct(listProduct);
+    }
+    function editProduct(index) {
+        let newProduct = prompt("Enter the new replace product", listProduct[index]);
+        if (newProduct != ""){
+            listProduct[index] = newProduct;
+        }else {
+            alert("Please enter for each replace product");
+        }
+        displayProduct(listProduct);
+    }
+    function addProduct() {
+        let newProduct = document.getElementById('product').value;
+        if (newProduct != ""){
+            listProduct.push(newProduct);
+            displayProduct(listProduct);
+            document.getElementById('product').value = "";
+        }else {
+            alert("Please enter a new product");
+        }
+    }
+</script>
+</body>
+</html>

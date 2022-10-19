@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Building Rectangle class</title>
+</head>
+<body>
+<canvas id="myCanvas" width="768px" height="200px" style="border: 1px solid #000000"></canvas>
+<br>
+<script>
+    length1 = +prompt("Enter the rectangle length");
+    width1 = +prompt("Enter the rectangle width");
+    class Rectangle{
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
+        }
+        getLength(){
+            return this.x;
+        }
+        getWidth(){
+            return this.y;
+        }
+        getArea(){
+            return this.x * this.y;
+        }
+        getPerimeter(){
+            return 2 * (this.x + this.y);
+        }
+    };
+    let rectangle = new Rectangle(length1, width1);
+    document.write("Area of rectangle: "+ rectangle.getArea() + "<br>");
+    document.write("Perimeter of rectangle: " + rectangle.getPerimeter());
+</script>
+</body>
+</html>

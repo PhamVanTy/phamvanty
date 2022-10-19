@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product application</title>
+</head>
+<body>
+<form action="">
+    <h2>List Product</h2>
+    <p id="list"><br></p>
+    <button type="button" onclick="addProduct(product)">Add</button>
+    <button type="button" onclick="changeProduct(product)">Change</button>
+    <button type="button" onclick="removeProduct(product)">Remove</button>
+</form>
+<script>
+    let num = +prompt("Enter the number of product");
+    let product = [];
+    for (let i = 0; i < num; i++) {
+        product[i] = prompt("Enter the product " + i);
+    }
+
+    function displayProduct(prod) {
+        let str = "";
+        for (let i = 0; i < prod.length; i++) {
+            str += (i + 1) + ". " + prod[i] + "<br>";
+        }
+        return str;
+    }
+
+    function addProduct(prod) {
+        let newProduct = prompt("Enter the new product");
+        prod.push(newProduct);
+        document.getElementById('list').innerHTML = displayProduct(prod);
+    }
+
+    function changeProduct(prod) {
+        let index = +prompt("Enter the index to change");
+        let newProduct = prompt("Enter the new product change");
+        prod[index-1] = newProduct;
+        document.getElementById('list').innerHTML = displayProduct(prod);
+    }
+
+    function removeProduct(prod) {
+        let index = +prompt("Enter the index to remove");
+        prod.splice(index-1, 1);
+        document.getElementById('list').innerHTML = displayProduct(prod);
+    }
+
+    document.getElementById('list').innerHTML = displayProduct(product);
+</script>
+</body>
+</html>
