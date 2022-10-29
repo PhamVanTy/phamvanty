@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Switch on or off Lamp</title>
+</head>
+<body>
+<script>
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status;
+        }
+
+        turnOn() {
+            this.status = "ON";
+        };
+
+        turnOff() {
+            this.status = "OFF";
+        };
+    };
+
+    class SwitchButton {
+        constructor(status, lamp) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+
+        connectToLamp(lamp) {
+            if (this.status === "ON") {
+                lamp.turnOff();
+            } else {
+                lamp.turnOn();
+            }
+        };
+
+        switchOn() {
+            this.status = "ON";
+        };
+
+        switchOff() {
+            this.status = "OFF";
+        };
+    };
+    let lamp1 = new ElectricLamp("ON");
+    let control1 = new SwitchButton("ON", lamp1);
+    for (let i = 0; i < 10; i++) {
+        control1.switchOff();
+        control1.connectToLamp(lamp1);
+        document.write(lamp1.status + "<br>");
+        control1.switchOn();
+        control1.connectToLamp(lamp1);
+        document.write(lamp1.status + "<br>");
+    }
+</script>
+</body>
+</html>

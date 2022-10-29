@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Application Adam Eva</title>
+</head>
+<body>
+<script>
+    class Apple{
+        constructor() {
+            this.weight = 10;
+        };
+        getWeight(){
+            return this.weight;
+        };
+        isEmpty(){
+            if (this.weight===0){
+                return false;
+            }else {
+                return true;
+            }
+        };
+        decrease(){
+            if (this.isEmpty() === true){
+                return this.weight--;
+            }
+        };
+    };
+    class Human{
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        };
+        isMale(){
+            if (this.gender === "male"){
+                return true;
+            }else {
+                return false;
+            }
+        };
+        setGender(gender){
+            this.gender = gender;
+        };
+        checkApple(food){
+            if (food.isEmpty()){
+                return true;
+            }else {
+                return false;
+            }
+        };
+        eat(food){
+            if (food.isEmpty()){
+                this.weight++;
+            }
+        };
+        say(){
+            if (this.isMale() === true){
+                console.log("The male to eat apple");
+            }else {
+                console.log("The female to eat apple");
+            }
+        };
+        getName(){
+            return this.name;
+        };
+        setName(name){
+            this.name = name;
+        };
+        getWeight(){
+            return this.weight;
+        };
+        setWeight(weight){
+            this.weight = weight;
+        };
+    };
+    let apple = new Apple();
+    let Adam = new Human("Adam", "male", 70);
+    Adam.say();
+    for (let i = apple.getWeight(); i >= 0; i--) {
+        // Adam.checkApple(apple);
+        Adam.eat(apple);
+        apple.decrease();
+        console.log("The weight Human after once each to eat: "+Adam.getWeight());
+        if (apple.getWeight() === 0){
+            console.log("Your done to eat!");
+            break;
+        }
+    }
+    // console.log("The weight human after eat food: "+Adam.getWeight());
+</script>
+</body>
+</html>
